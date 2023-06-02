@@ -6,6 +6,8 @@ public class Actions : MonoBehaviour
     public AnimalStats animalStats;
     public string occupiedFarmer;
     public AnimalManager aManager;
+    public TextMeshProUGUI taskText;
+    public string task;
     public void cancel()
     {
         transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(170, -108, 0);
@@ -13,6 +15,7 @@ public class Actions : MonoBehaviour
     
     public void giveLove()
     {
+        task = new string("");
         animalStats._love += animalStats._hug;
         animalStats.zLove = false;
         if(animalStats._love > animalStats.maxLove )
@@ -23,15 +26,18 @@ public class Actions : MonoBehaviour
         if (aManager.night == true)
         {
             animalStats._energy -= animalStats.maxEnergy * 0.06f;
-            Debug.Log("You awoke them during the night");
+            task +=("You awoke them during the night so deducted "+ animalStats.maxEnergy * 0.06f);
         }
-        Debug.Log("You gave " + animalStats._name + " some hugs. They now have " + animalStats._love);
+        task+=("\n"+"You gave " + animalStats._name + " some hugs. They now have " + animalStats._love);
+        taskText.text = new string(task);
         cancel();
         StartCoroutine(GameManager.Instance.holdFarmer(GameObject.Find(occupiedFarmer)));
     }
 
     public void giveBath()
     {
+
+        task = new string("");
         animalStats._cleanliness += animalStats._bath;
         animalStats.zCleanliness = false;
         if(animalStats._cleanliness> animalStats.maxCleanliness)
@@ -43,15 +49,18 @@ public class Actions : MonoBehaviour
         if(aManager.night==true)
         {
             animalStats._energy -= animalStats.maxEnergy * 0.06f;
-            Debug.Log("You awoke them during the night");
+            task += ("You awoke them during the nightso deducted " + animalStats.maxEnergy * 0.06f);
         }
-        Debug.Log("You gave " + animalStats._name + " a bath. They now have " + animalStats._cleanliness);
+        task += ("\n" + "You gave " + animalStats._name + " a bath. They now have " + animalStats._cleanliness);
+        taskText.text = new string(task);
         cancel();
         StartCoroutine(GameManager.Instance.holdFarmer(GameObject.Find(occupiedFarmer)));
     }
 
     public void giveSnacks()
     {
+
+        task = new string("");
         animalStats._hunger += animalStats._feed;
         animalStats.zHunger = false;
         animalStats._energy += animalStats.maxEnergy * 0.05f;
@@ -64,9 +73,10 @@ public class Actions : MonoBehaviour
         if (aManager.night == true)
         {
             animalStats._energy -= animalStats.maxEnergy * 0.06f;
-            Debug.Log("You awoke them during the night");
+            task += ("You awoke them during the night so deducted " + animalStats.maxEnergy * 0.06f);
         }
-        Debug.Log("You gave " + animalStats._name + " some snackos. They now have " + animalStats._hunger);
+        task += ("\n" + "You gave " + animalStats._name + " some snackos. They now have " + animalStats._hunger);
+        taskText.text = new string(task);
         cancel();
         StartCoroutine(GameManager.Instance.holdFarmer(GameObject.Find(occupiedFarmer)));
     }

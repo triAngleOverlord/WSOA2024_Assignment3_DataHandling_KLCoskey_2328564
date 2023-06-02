@@ -24,13 +24,13 @@ MonoBehaviour:
   _hug: 5
   _bath: 30
   _sleep: 2.5
-  _health: 35
-  _love: -2
-  _hunger: 14
-  _energy: 45
-  _cleanliness: 21
-  _healthRateLoss: 0
-  zLove: 0
+  _health: 12.600002
+  _love: 0
+  _hunger: 1
+  _energy: 14.5
+  _cleanliness: 0
+  _healthRateLoss: 1.4
+  zLove: 1
   zHunger: 0
   zEnergy: 0
-  zCleanliness: 0
+  zCleanliness: 1

@@ -36,6 +36,10 @@ public class AnimalManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (GameManager.hour>22 || GameManager.hour<7)
         {
             night = true;

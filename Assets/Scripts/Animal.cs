@@ -32,7 +32,7 @@ public class Animal : MonoBehaviour
             currentFarmer = GameObject.Find(popUp.transform.GetComponent<Actions>().occupiedFarmer);
             
 
-            currentFarmer.GetComponent<MovingFarmer>().currentAnimal = stats._name;
+            currentFarmer.GetComponent<MovingFarmer>().currentAnimal = new string( stats._name);
 
 
         }
@@ -74,7 +74,7 @@ public class Animal : MonoBehaviour
                     statDisplay.transform.Find("Energy").transform.GetComponent<TextMeshProUGUI>().text = new string("Energy: " + stats._energy.ToString());
                     statDisplay.transform.Find("Cleanliness").transform.GetComponent<TextMeshProUGUI>().text = new string("Cleanliness: " + stats._cleanliness.ToString());
                 }
-
+                /*
                 else if (currentFarmer.GetComponent<MovingFarmer>().currentAnimal==null)
                 {
                     statDisplay.transform.Find("Animal_Name").GetComponent<TextMeshProUGUI>().text = new string(" ");
@@ -84,7 +84,7 @@ public class Animal : MonoBehaviour
                     statDisplay.transform.Find("Energy").transform.GetComponent<TextMeshProUGUI>().text = new string(" ");
                     statDisplay.transform.Find("Cleanliness").transform.GetComponent<TextMeshProUGUI>().text = new string(" ");
 
-                }
+                }*/
             }   
         }
 
