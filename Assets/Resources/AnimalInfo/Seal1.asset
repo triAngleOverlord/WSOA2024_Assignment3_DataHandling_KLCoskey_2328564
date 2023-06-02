@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc170e4e8716e54b82a6e5a02282a95, type: 3}
+  m_Name: Seal1
+  m_EditorClassIdentifier: 
+  _name: Celine
+  type: 2
+  maxHealth: 40
+  maxLove: 25
+  maxHunger: 35
+  maxEnergy: 30
+  maxCleanliness: 35
+  _startHealthRate: 0
+  _feed: 40
+  _hug: 30
+  _bath: 10
+  _sleep: 1
+  _health: 14
+  _love: 38
+  _hunger: 1
+  _energy: 24
+  _cleanliness: 14
+  _healthRateLoss: 0

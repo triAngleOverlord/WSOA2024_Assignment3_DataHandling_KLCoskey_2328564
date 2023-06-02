@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc170e4e8716e54b82a6e5a02282a95, type: 3}
+  m_Name: Fox1
+  m_EditorClassIdentifier: 
+  _name: Terry
+  type: 1
+  maxHealth: 35
+  maxLove: 10
+  maxHunger: 20
+  maxEnergy: 50
+  maxCleanliness: 30
+  _startHealthRate: 0
+  _feed: 15
+  _hug: 5
+  _bath: 30
+  _sleep: 2.5
+  _health: 35
+  _love: -2
+  _hunger: 14
+  _energy: 45
+  _cleanliness: 21
+  _healthRateLoss: 0
+  zLove: 0
+  zHunger: 0
+  zEnergy: 0
+  zCleanliness: 0
